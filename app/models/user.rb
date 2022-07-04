@@ -11,6 +11,11 @@ class User < ApplicationRecord
     expart: 0,
     other: 1
   }
+
+  enum child_gender:{
+    man: 0,
+    woman: 1
+  }
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :lockable, :confirmable, :timeoutable, :trackable
