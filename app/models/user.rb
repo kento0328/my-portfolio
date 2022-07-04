@@ -13,8 +13,8 @@ class User < ApplicationRecord
   }
 
   enum child_gender:{
-    man: 0,
-    woman: 1
+    child_man: 0,
+    child_woman: 1
   }
   
   devise :database_authenticatable, :registerable,
