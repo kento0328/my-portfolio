@@ -11,6 +11,7 @@
 
   <body>
     <header>
+    
       <nav>
           <% if user_signed_in? %>
             <strong><%= link_to current_user.username, pages_show_path %></strong>
@@ -21,11 +22,14 @@
             <%= link_to 'ログイン', new_user_session_path %>
           <% end %>
       </nav>
+
     </header>
+
     <!-- ここに追加 -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
+    
   </body>
 </html>
