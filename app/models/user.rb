@@ -6,6 +6,11 @@ class User < ApplicationRecord
     man: 0,
     woman: 1
   }
+
+  enum label:{
+    expart: 0,
+    other: 1
+  }
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :lockable, :confirmable, :timeoutable, :trackable
