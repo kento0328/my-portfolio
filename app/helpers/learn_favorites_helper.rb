@@ -1,0 +1,2 @@
+module LearnFavoritesHelper
+end

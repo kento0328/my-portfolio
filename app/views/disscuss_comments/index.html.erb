@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Disscuss comments</h1>
+
+<div id="disscuss_comments">
+  <% @disscuss_comments.each do |disscuss_comment| %>
+    <%= render disscuss_comment %>
+    <p>
+      <%= link_to "Show this disscuss comment", disscuss_comment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New disscuss comment", new_disscuss_comment_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: learn) do |form| %>
+  <% if learn.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(learn.errors.count, "error") %> prohibited this learn from being saved:</h2>
+
+      <ul>
+        <% learn.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :article, style: "display: block" %>
+    <%= form.text_area :article %>
+  </div>
+
+  <div>
+    <%= form.label :comment, style: "display: block" %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.number_field :image %>
+  </div>
+
+  <div>
+    <%= form.label :favorite, style: "display: block" %>
+    <%= form.number_field :favorite %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

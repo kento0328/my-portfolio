@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Learn comments</h1>
+
+<div id="learn_comments">
+  <% @learn_comments.each do |learn_comment| %>
+    <%= render learn_comment %>
+    <p>
+      <%= link_to "Show this learn comment", learn_comment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New learn comment", new_learn_comment_path %>

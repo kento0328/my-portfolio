@@ -1,0 +1,2 @@
+class LearnImage < ApplicationRecord
+end

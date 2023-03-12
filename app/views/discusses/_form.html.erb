@@ -1,0 +1,37 @@
+<%= form_with(model: discuss) do |form| %>
+  <% if discuss.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(discuss.errors.count, "error") %> prohibited this discuss from being saved:</h2>
+
+      <ul>
+        <% discuss.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :id, style: "display: block" %>
+    <%= form.number_field :id %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.label :comment, style: "display: block" %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

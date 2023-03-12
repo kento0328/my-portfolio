@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @learn_image %>
+
+<div>
+  <%= link_to "Edit this learn image", edit_learn_image_path(@learn_image) %> |
+  <%= link_to "Back to learn images", learn_images_path %>
+
+  <%= button_to "Destroy this learn image", @learn_image, method: :delete %>
+</div>

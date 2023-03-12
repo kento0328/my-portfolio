@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Learn favorites</h1>
+
+<div id="learn_favorites">
+  <% @learn_favorites.each do |learn_favorite| %>
+    <%= render learn_favorite %>
+    <p>
+      <%= link_to "Show this learn favorite", learn_favorite %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New learn favorite", new_learn_favorite_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: learn_comment) do |form| %>
+  <% if learn_comment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(learn_comment.errors.count, "error") %> prohibited this learn_comment from being saved:</h2>
+
+      <ul>
+        <% learn_comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :learn_id, style: "display: block" %>
+    <%= form.number_field :learn_id %>
+  </div>
+
+  <div>
+    <%= form.label :learn_comment, style: "display: block" %>
+    <%= form.text_area :learn_comment %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
